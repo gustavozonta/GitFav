@@ -46,7 +46,7 @@ This project is above the MIT license.
 
 ## link
 
-<a href="https://gustavozonta.github.io/fortunecookiegame/" target="_blank"> Fortune Cookie </a>
+<a href="https://gustavozonta.github.io/GitFav/" target="_blank"> GitFav </a>
 
 ---
 <p align="center"> Made  ♥  by Gustavo Zonta</p>
