@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --text-color-general: #e1e1e6;
+  --text-color-placeholder: #7c7c8a;
+
+  --input-bg-color: #06181C;
+  --button-vg: #065E7C;
+  --header-bg-color: #092D38;
+  --border-th-color: #4A808C;
+  --cl-empy-table: #4E5455;
+
+
+
+  --bg-color: #2f2f33;
+  --bg-empty: #06181CE8;
+
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color-general);
+  background-color: var(--bg-color);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 7rem 0 7rem 0;
+}
+
+.container {
+  display: flex;
+  gap: .8rem;
+
+}
+
+#input-search {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  width: 46.8rem;
+  height: 4.2rem;
+  background-color: var(--input-bg-color);
+  color: var(--text-color-placeholder);
+  border: none;
+  border-radius: .4rem;
+  padding: .5rem;
+}
+
+#input-search:focus {
+  outline: none;
+}
+
+.button-bookmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  height: 4.2rem;
+  width: 17rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--button-vg);
+  color: white;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.button-bookmark:hover {
+  background-color: #0e8db7;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid var(--border-th-color);
+  border-radius: 1.2rem;
+}
+
+table tr td {
+  border-top: 1px solid var(--border-th-color);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color-general);
+}
+
+table th {
+  background-color: var(--header-bg-color);
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+table tr {
+  background-color: var(--header-bg-color);
+  text-align:  center;
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--bg-color);
+}
+
+table td {
+  padding: 1.5rem;
+}
+
+tbody {
+  display: block;
+  max-height: 38rem;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+tbody::-webkit-scrollbar {
+  width: .7rem;
+}
+
+tbody::-webkit-scrollbar-track {
+  border: 3px solid transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: var(--border-th-color);
+  border-radius: 2rem; 
+}
+
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user p {
+  font-weight: bold;
+}
+
+.remove {
+  border: none;
+  background-color: transparent;
+  color: red;
+  font-weight: 700;
+  cursor: pointer
+}
+
+table tbody .empty-table td {
+  display: table-cell;
+  text-align: center;
+  padding: 0;
+  height: 37rem;
+  background-color: var(--bg-empty);
+}
+
+
+table tbody .empty-table td div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+}
+
+table tbody .empty-table td div p {
+  font-family: 'Roboto mono', monospace;
+  font-size: 5rem;
+  color: var(--cl-empy-table);
+}
+
+@media (max-width: 768px) {
+header {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5rem 0;
+  gap: 3rem;
+  }
+
+.container {
+  flex-wrap: wrap;
+  }
+
+#input-search {
+  width: 100%;
+  max-width: 100%;
+  }
+
+.button-bookmark {
+  width: 100%;
+  max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+header {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5rem 0;
+  }
+
+.container {
+  flex-wrap: wrap;
+  }
+
+#input-search {
+  width: 100%;
+  max-width: 100%;
+  }
+
+.button-bookmark {
+  width: 100%;
+  max-width: 100%;
+  }
+}
+
+
+
+
+
+
